@@ -1,5 +1,5 @@
 import { increment } from "../domain/counterModel";
-import { UpdateCounterGateway } from "./updateCounter";
+import { updateCounter, UpdateCounterGateway } from "./updateCounter";
 
 const incrementCounter = (gateway: UpdateCounterGateway) => {
     return updateCounter(gateway, increment);

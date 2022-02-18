@@ -7,7 +7,7 @@ type UpdateCounterGateway = Pick<
     'counter' | 'updateCounter' | 'setCounter'
 >;
 const debounce = require('lodash.debounce');
-const debouncedTask = debounce((task: Promise<Counter | undefined>) => Promise.resolve(task()), 500);
+const debouncedTask = debounce((task: () => Promise<Counter | undefined>) => Promise.resolve(task()), 500);
 
 const updateCounter = (
     gateway: UpdateCounterGateway,

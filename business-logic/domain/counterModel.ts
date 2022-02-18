@@ -1,4 +1,4 @@
-import { Counter } from "./CounterEntity";
+import { Counter } from "./counterEntity";
 
 const create = (count: Counter['value']) => ({value: count});
 
