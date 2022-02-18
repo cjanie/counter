@@ -9,7 +9,7 @@ type UpdateCounterGateway = Pick<
 const debounce = require('lodash.debounce');
 const debouncedTask = debounce((task: () => Promise<Counter | undefined>) => Promise.resolve(task()), 500);
 
-const updateCounter = (
+const updateCounterUseCase = (
     gateway: UpdateCounterGateway,
     updateBy: (counter: Counter) => Counter
 ) => {
@@ -22,5 +22,5 @@ const updateCounter = (
     }
 };
 
-export { updateCounter };
+export { updateCounterUseCase };
 export type { UpdateCounterGateway };

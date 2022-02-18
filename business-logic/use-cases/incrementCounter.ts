@@ -1,8 +1,8 @@
 import { increment } from "../domain/counterModel";
-import { updateCounter, UpdateCounterGateway } from "./updateCounter";
+import { updateCounterUseCase, UpdateCounterGateway } from "./updateCounter";
 
-const incrementCounter = (gateway: UpdateCounterGateway) => {
-    return updateCounter(gateway, increment);
+const incrementCounterUseCase = (gateway: UpdateCounterGateway) => {
+    return updateCounterUseCase(gateway, increment);
 }
 
-export {incrementCounter };
+export {incrementCounterUseCase };

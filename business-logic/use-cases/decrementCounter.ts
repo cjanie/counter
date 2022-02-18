@@ -1,8 +1,8 @@
 import { decrement } from "../domain/counterModel";
-import { updateCounter, UpdateCounterGateway } from "./updateCounter";
+import { updateCounterUseCase, UpdateCounterGateway } from "./updateCounter";
 
-const decrementCounter = (gateway: UpdateCounterGateway) => {
-    return updateCounter(gateway, decrement);
+const decrementCounterUseCase = (gateway: UpdateCounterGateway) => {
+    return updateCounterUseCase(gateway, decrement);
 }
 
-export { decrementCounter };
+export { decrementCounterUseCase };
